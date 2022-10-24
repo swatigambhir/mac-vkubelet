@@ -2,7 +2,7 @@
 
 Mac provider for virtual kubelet under development.
 
-Proof-of-concept implementation of Virtual Kubelet Provider for macos that can be deployed in kubernetes cluster with skaffold or helm chart.
+Proof-of-concept implementation of Virtual Kubelet Provider for macos that could be deployed in AKS with using helm chart.
 
 The mac virtual kubelet provider can be used to manage on-prem mac hosts from kubectl API enabling scripting, auto-scaling and monitoring, config management and possible integration with a web UI for healthcheck without the need of actual virtualization or performace impact. 
 
