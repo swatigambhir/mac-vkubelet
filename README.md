@@ -10,19 +10,26 @@ Ref: https://github.com/virtual-kubelet/virtual-kubelet
 
 
 # How to test with minikube setup
+# Build
+Run 'go build' to generate the executable for the virtual kubelet
+
 # Install minikube
 brew install hyperkit
 brew install minikube
+
 # Start minikube locally
 minikube start --v=7 --alsologtostderr
 # Run Virtual kublet with kubeconfig
-./mac-vkubelet --kubeconfig /Users/sgambhir/.kube/config --nodename mac-test
+./mac-vkubelet --kubeconfig $HOME/.kube/config --nodename mac-test
 
 # Run kubectl Get Nodes 
-sgambhir-mn3:code sgambhir$ kubectl get nodes
+kubectl get nodes
+
+
 NAME                  STATUS   ROLES           AGE     VERSION
 mac-test              Ready    worker          15s     
 minikube              Ready    control-plane   4h44m   v1.24.3
+
 
 # Create Pod
 kubectl create -f /Users/sgambhir/code/go/src/mac-vkubelet/internal/sample-pod.yaml
